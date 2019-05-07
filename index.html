@@ -17,18 +17,16 @@
 
 	<!-- Javascript Framework (e.g., vue.js) (ADD HERE) -->
 	<script src="https://vuejs.org/js/vue.js"></script>
-
 	
 </head>
 
   <body>
-		<div class="container" id="app">
-
+	<div class="container" id="app_vue">
 
 	    <div class="header">
 		    
-	      <div class="container">
-	        <h1 id="app_title">%title%</h1>
+	      <div class="container" >
+	        <h1 id="app_title" >{{title}}</h1>
 	      </div>
 	      
 	    </div>
@@ -41,9 +39,6 @@
 	        <div class="col-md-6"> 
 	            <div class="thumbnail" v-for="(movie, index) in movies">
 
-						<img class="poster"  />
-						<div class="imageInfo">%posterindex%</div>
-						
 						<img class="poster" v-bind:src="movie.posters[movie.posterindex]" @click="posterClick(index)" />
 						<div class="imageInfo">{{movie.posterindex + 1}} of {{movie.posters.length}}</div>
 
@@ -65,8 +60,8 @@
 
 	    <div class="footer">
 	      <div class="container">
-			<a id="github" class="btn btn-lg btn-warning">
-				<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i>%owner% %github%
+			<a id="github" v-bind:href="github" target="_blank" class="btn btn-lg btn-warning">
+				<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i>{{owner}}
 	  		</a>
 	      </div>
 	    </div>
