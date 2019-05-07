@@ -1,7 +1,7 @@
 /* SITE.JS: THIS FILE CONTAINS THE METHODS/FUNCTIONS AND VARIABLES CONTROLLING YOUR SITE
 // 
 */
-
+                
 /* NOTE: MOVIES.JSON CONTAINS A LIST OF MOVIES AND ACCOMPANYING METADATA
 //    
 //    They are in the following format:
@@ -35,6 +35,9 @@ const vue_app = new Vue({
             movies: []
 
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
+            title: "IMDB + MinJoo's Top 8 Movies",
+            owner: "MinJoo",
+            github: "https://github.com/bmj958/bun-p3"
       },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
