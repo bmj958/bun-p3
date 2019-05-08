@@ -1,7 +1,7 @@
 /* SITE.JS: THIS FILE CONTAINS THE METHODS/FUNCTIONS AND VARIABLES CONTROLLING YOUR SITE
 // 
 */
-                
+
 /* NOTE: MOVIES.JSON CONTAINS A LIST OF MOVIES AND ACCOMPANYING METADATA
 //    
 //    They are in the following format:
@@ -21,8 +21,8 @@
 */
 
 
-const vue_app = new Vue({
-      el: '#vue_app',
+const app = new Vue({
+      el: '#app_vue',
       // This automatically imports your movies.json file and puts it into
       //   the variable: movies
       created () {
@@ -31,8 +31,9 @@ const vue_app = new Vue({
             })
       },
       data: {
+
             // This holds your movies.json data.
-            movies: []
+            movies: [],
 
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
             title: "IMDB + MinJoo's Top 8 Movies",
@@ -41,7 +42,7 @@ const vue_app = new Vue({
       },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
-      makeTextDate: function (dateArray){
+            makeTextDate: function (dateArray){
                   let month = dateArray[1];
                   let day    = dateArray[2];
                   let year = dateArray[0];
